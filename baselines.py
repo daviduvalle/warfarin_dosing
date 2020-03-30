@@ -154,7 +154,7 @@ class ClinicalDosingAlgorithm():
 
 if __name__ == '__main__':
     print('Baselines performance\n')
-    data = pd.read_csv('../data/warfarin_filled.csv')
+    data = pd.read_csv('data/warfarin_filled.csv')
 
     #fixedDose = FixedDose(data)
     #fixedDose.compute_performance_score()

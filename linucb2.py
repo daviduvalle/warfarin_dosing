@@ -1,16 +1,14 @@
-import linear_data_loader as ldl
 import numpy as np
 import util
 from featurizer import Featurizer
 from util import plot_error_rate
 from util import plot_regret
 
-FEATURE_DIM = ldl.NUM_COLS
 NUM_ACTIONS = 3
 
 
 class Lin_UCB():
-    def __init__(self, alpha, K=NUM_ACTIONS, d=FEATURE_DIM):
+    def __init__(self, alpha, K, d):
         self.alpha = alpha
         self.K = K
         self.d = d
@@ -106,7 +104,7 @@ if __name__ == '__main__':
 
     ALPHA = 0.1
 
-    lin_ucb = Lin_UCB(alpha=ALPHA, d=data.shape[1])
+    lin_ucb = Lin_UCB(alpha=ALPHA, K=3, d=data.shape[1])
     lin_ucb.train(data, true_buckets)
     pred_buckets = lin_ucb.evaluate(data)
     acc, precision, recall = util.evaluate_performance(pred_buckets, true_buckets)
