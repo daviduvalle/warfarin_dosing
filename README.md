@@ -1,7 +1,6 @@
 # Warfarin dosing
 
-The project contains two baseline algorithms and one linear multi-arm bandit (LinUCB) that try to find the right dose of Warfarin for patients with risk of developing blood clots.
-
+The project contains two baseline algorithms and one linear multi-arm bandit. (LinUCB) All try to find the right dose of Warfarin which is a treatment for blood cloths. This problem as simplification since it assigns low/med/high doses instead of actual milligrams.
 
 # Run 
     virtualenv -p python3 myenv; source myenv/bin/activate
